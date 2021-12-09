@@ -36,7 +36,7 @@ CURRENT_BG='NONE'
 
 case ${SOLARIZED_THEME:-dark} in
     light) CURRENT_FG='white';;
-    *)     CURRENT_FG='black';;
+    *)     CURRENT_FG='white';;
 esac
 
 # Special Powerline characters
@@ -88,7 +88,7 @@ prompt_end() {
 
 # Context: user@hostname (who am I and where am I)
 prompt_context() {
-  if [[ "$USERNAME" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
+  if [[ "$HOSTNAME" != "$DEFAULT_HOST" || -n "$SSH_CLIENT" ]]; then
     prompt_segment black default "%(!.%{%F{yellow}%}.)%n@%m"
   fi
 }
