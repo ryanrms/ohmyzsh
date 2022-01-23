@@ -1,11 +1,14 @@
-# Totally ripped off Junkfood theme
+
+# Totally ripped off Dallas theme
 
 # Grab the current date (%W) and time (%t):
-JUNKSHIP_TIME_="%{$fg_bold[white]%}( %{$fg_bold[yellow]%}%W%{$reset_color%} @ %{$fg_bold[white]%}%T )( %{$reset_color%}"
+JUNKSHIP_TIME_="💲%{$fg_bold[white]%}( %{$fg_bold[yellow]%}%W%{$reset_color%}@%{$fg_bold[white]%}%T )( %{$reset_color%}"
 
 # Grab the current machine name 
 JUNKSHIP_MACHINE_="%{$fg_bold[blue]%}%m%{$fg[white]%} ):%{$reset_color%}"
 
+#add some bling
+JUNKSHIP_BLING_="%{$fg[green]%}❯ %{$reset_color%}"
 # Grab the current username 
 JUNKSHIP_CURRENT_USER_="%{$fg_bold[green]%}%n%{$reset_color%}"
 
@@ -27,4 +30,4 @@ ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg_bold[red]%}⛔️⛔️⛔️"
 
 # Put it all together!
 PROMPT="$JUNKSHIP_TIME_$JUNKSHIP_CURRENT_USER_@$JUNKSHIP_MACHINE_$JUNKSHIP_LOCA_
-   %{$fg_bold[green]%}❯ %{$reset_color%}"
+  $JUNKSHIP_BLING_"
